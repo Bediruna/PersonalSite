@@ -1,0 +1,71 @@
+html, body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif
+}
+
+body {
+    background-image: linear-gradient(to right, rgba(0, 102, 255, 0), rgba(255,255,255, 1) 90%);
+}
+
+.topNavBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navBar {
+    background-color: black;
+    color: white;
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0, 0.16);
+}
+
+
+#wrkXpSection {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    top: 35px;
+    background-color: #e6e6e6;
+}
+
+#educationSection {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    top: 35px;
+    background-color: white;
+}
+
+.titleCard {
+    width: 400px;
+    /*background-color: #0066ff;*/
+    background-image: linear-gradient(to right, black, white);
+    color: white;
+    position: absolute;
+    left: 300px;
+    transition: 1s;
+    padding: 10px;
+}
+
+.translate.triggeredCSS3 {
+    transform: translate3d(-300px,0,0);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #cccccc;
+    padding: 10px;
+}
+
+    footer a {
+        padding: 10px;
+    }
+
+        footer a:hover {
+            background-color: #b3b3b3;
+            color: blue;
+        }
