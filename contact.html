@@ -1,29 +1,8 @@
-﻿<?php
-    require_once('bedir_php/PHPMailerAutoload.php');
-
-    $mail = new PHPMailer();
-    $mail->isSMTP();
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = 'ssl';
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = '465';
-    $mail->isHTML();
-
-    $mail->Username = 'dmloadnotifications@gmail.com';
-    $mail->Password = 'Test123!';
-
-    $mail->AddAddress('bedir@dmwtrans.com');
-    $mail->Subject = 'Load needs to be delivered soon.';
-    $mail->Body = 'TEST';
-    $mail->Send();
-
-?>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Bedir Aygun</title>
-    <link rel="shortcut icon" href="ManIcon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
