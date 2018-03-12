@@ -121,3 +121,60 @@ footer {
 .padding-large {
     padding: 12px 24px !important
 }
+
+        .skillBar {
+            height: 18px;
+            -webkit-animation-duration:3s; /* Safari 4.0 - 8.0 */
+            animation-duration: 3s;
+        }
+
+        @keyframes bar95{
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 95%;
+            }
+        }
+
+        #softDevBar {
+            width:95%;
+            -webkit-animation-name: bar95; /* Safari 4.0 - 8.0 */
+            animation-name: bar95;
+
+        }
+
+        @keyframes bar85 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 85%;
+            }
+        }
+
+        #infoTecBar {
+            width:85%;
+            -webkit-animation-name: bar85; /* Safari 4.0 - 8.0 */
+            animation-name: bar85;
+
+        }
+
+        @keyframes bar75 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 75%;
+            }
+        }
+
+        #webDevBar {
+            width:75%;
+            -webkit-animation-name: bar75; /* Safari 4.0 - 8.0 */
+            animation-name: bar75;
+
+        }
