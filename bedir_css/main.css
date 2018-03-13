@@ -6,20 +6,12 @@ body, html {
     height: 100%;
 }
 
-.topNavBar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
 .navBar {
     background-color: black;
     color: white;
     width: 100%;
     box-shadow: 0 2px 5px 0 rgba(0,0,0, 0.16);
 }
-
 
 footer {
     position: relative;
@@ -40,6 +32,34 @@ footer {
         }
 
 
+
+.bar-item {
+    font-size: 1.1em;
+}
+
+.bar .bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0
+}
+
+.bar-block .bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+.bar-block.w3-center .bar-item {
+    text-align: center
+}
 
 /*-----Index Page-----*/
 
@@ -91,6 +111,7 @@ footer {
 .resume-containerPadding {
     padding: 0.01em 16px;
     background-color: white;
+    border-radius: 20px;
 }
 
 .resume-boxShadow {
@@ -122,59 +143,56 @@ footer {
     padding: 12px 24px !important
 }
 
-        .skillBar {
-            height: 18px;
-            -webkit-animation-duration:3s; /* Safari 4.0 - 8.0 */
-            animation-duration: 3s;
-        }
+.skillBar {
+    height: 18px;
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    animation-duration: 3s;
+}
 
-        @keyframes bar95{
-            from {
-                width: 0%;
-            }
+@keyframes bar95 {
+    from {
+        width: 0%;
+    }
 
-            to {
-                width: 95%;
-            }
-        }
+    to {
+        width: 95%;
+    }
+}
 
-        #softDevBar {
-            width:95%;
-            -webkit-animation-name: bar95; /* Safari 4.0 - 8.0 */
-            animation-name: bar95;
+#softDevBar {
+    width: 95%;
+    -webkit-animation-name: bar95; /* Safari 4.0 - 8.0 */
+    animation-name: bar95;
+}
 
-        }
+@keyframes bar85 {
+    from {
+        width: 0%;
+    }
 
-        @keyframes bar85 {
-            from {
-                width: 0%;
-            }
+    to {
+        width: 85%;
+    }
+}
 
-            to {
-                width: 85%;
-            }
-        }
+#infoTecBar {
+    width: 85%;
+    -webkit-animation-name: bar85; /* Safari 4.0 - 8.0 */
+    animation-name: bar85;
+}
 
-        #infoTecBar {
-            width:85%;
-            -webkit-animation-name: bar85; /* Safari 4.0 - 8.0 */
-            animation-name: bar85;
+@keyframes bar75 {
+    from {
+        width: 0%;
+    }
 
-        }
+    to {
+        width: 75%;
+    }
+}
 
-        @keyframes bar75 {
-            from {
-                width: 0%;
-            }
-
-            to {
-                width: 75%;
-            }
-        }
-
-        #webDevBar {
-            width:75%;
-            -webkit-animation-name: bar75; /* Safari 4.0 - 8.0 */
-            animation-name: bar75;
-
-        }
+#webDevBar {
+    width: 75%;
+    -webkit-animation-name: bar75; /* Safari 4.0 - 8.0 */
+    animation-name: bar75;
+}

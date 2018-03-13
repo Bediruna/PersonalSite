@@ -5,17 +5,32 @@
     <link rel="shortcut icon" href="bedir_img/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="bedir_css/w3.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="bedir_css/main.css">
     <link href="bedir_css/aos.css" rel="stylesheet">
     <script src="bedir_js/aos.js"></script>
 
+
     <style>
 
+        body {
+            background-image: url('bedir_img/splash.jpg');
+            height: 100%;
+            width: 100%;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
 
+        .w3-bar a {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
     </style>
 
 </head>
@@ -23,24 +38,24 @@
 
     <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-bar w3-black w3-card">
-            <a class="w3-bar-item w3-button padding-large hide-medium hide-large w3-right" href="javascript:void(0)" onclick="navFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <div class="bar w3-text-white" id="myNavbar">
+            <a class="bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
-            <a href="http://www.bedir.tech/" class="w3-bar-item w3-button padding-large">BEDIR AYGUN</a>
-            <a href="projects.html" class="w3-bar-item w3-button padding-large hide-small"><i class="fa fa-th"></i> PROJECTS</a>
-            <a href="resume.html" class="w3-bar-item w3-button padding-large hide-small"><i class="fa fa-file-text"></i> RESUME</a>
-            <a href="contact.html" class="w3-bar-item w3-button padding-large hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="http://www.bedir.tech" class="bar-item w3-button w3-padding-large w3-hover-blue">BEDIR AYGUN</a>
+            <a href="projects.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-th"></i> PROJECTS</a>
+            <a href="resume.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-file-text"></i> RESUME</a>
+            <a href="contact.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-envelope"></i> CONTACT</a>
 
-            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" class="w3-bar-item w3-button padding-large w3-right w3-hide-small"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/bediruna" class="w3-bar-item w3-button padding-large w3-right w3-hide-small"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-indigo"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/bediruna" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-github"></i></a>
         </div>
     </div>
 
     <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide hide-large hide-medium w3-top" style="margin-top:46px">
-        <a href="projects.html" class="w3-bar-item w3-button padding-large">PROJECTS</a>
-        <a href="contact.html" class="w3-bar-item w3-button padding-large">CONTACT</a>
-        <a href="resume.html" class="w3-bar-item w3-button padding-large">RESUME</a>
+    <div id="smallNav" class="bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="projects.html" class="bar-item w3-button w3-padding-large">PROJECTS</a>
+        <a href="contact.html" class="bar-item w3-button w3-padding-large">CONTACT</a>
+        <a href="resume.html" class="bar-item w3-button w3-padding-large">RESUME</a>
     </div>
 
     <br><br>
@@ -54,42 +69,43 @@
             <!-- Left Column -->
             <div class="w3-third" data-aos="fade-right">
 
-                <div class="w3-white w3-text-grey w3-card-4">
-                    <div class="resume-containerPadding">
-                        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large blueText"></i>Developer</p>
-                        <p><i class="fa fa-home fa-fw w3-margin-right w3-large blueText"></i>Orlando, FL</p>
-                        <hr>
+                <div class="resume-containerPadding">
+                    <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large blueText"></i>Developer</p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-large blueText"></i>Orlando, FL</p>
+                    <hr>
 
-                        <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right blueText"></i>Skills</b></p>
-                        <p>Software Development</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge blueBackground skillBar" id="softDevBar"></div>
-                        </div>
-                        <p>Information Technology</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge blueBackground skillBar" id="infoTecBar"></div>
-                        </div>
-                        <p>Web Development</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge blueBackground skillBar" id="webDevBar"></div>
-                        </div>
-
-                        <p class="w3-large w3-text-theme"><b><i class="fa fa-code fa-fw w3-margin-right blueText"></i>Programming Language Proficiencies</b></p>
-                        <p>Java</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge blueBackground" style="height:24px;width:100%"></div>
-                        </div>
-                        <p>C++</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge blueBackground" style="height:24px;width:95%"></div>
-                        </div>
-                        <p>Javascript</p>
-                        <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge blueBackground" style="height:24px;width:65%"></div>
-                        </div>
-                        <br>
+                    <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right blueText"></i>Skills</b></p>
+                    <p>Software Development</p>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div class="w3-round-xlarge blueBackground skillBar" id="softDevBar"></div>
                     </div>
-                </div><br>
+                    <p>Information Technology</p>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div class="w3-round-xlarge blueBackground skillBar" id="infoTecBar"></div>
+                    </div>
+                    <p>Web Development</p>
+                    <div class="w3-light-grey w3-round-xlarge">
+                        <div class="w3-round-xlarge blueBackground skillBar" id="webDevBar"></div>
+                    </div>
+
+
+                    <p class="w3-large w3-text-theme"><b><i class="fa fa-code fa-fw w3-margin-right blueText"></i>Technologies</b></p>
+                    Proficient:
+                    <ul>
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>HTML, CSS, Javascript</li>
+                    </ul>
+                    Worked With:
+                    <ul>
+                        <li>C#</li>
+                        <li>PHP, MySQL</li>
+                        <li>Visual Basic</li>
+                        <li>Python</li>
+                    </ul>
+
+                </div>
 
                 <!-- End Left Column -->
             </div>
@@ -98,7 +114,7 @@
             <div class="rightColumns" data-aos="fade-left">
 
                 <div class="resume-containerPadding resume-boxShadow w3-margin-bottom">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge blueText"></i>Work Experience</h2>
+                    <h2 class=" w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge blueText"></i>Work Experience</h2>
                     <div class="resume-containerPadding">
                         <span class="resume-items">Software Development and Procurement</span><br />
                         <a href="http://www.dmworldtransportation.com" class="resume-links"><span class="company-items">DM World Logistics</span></a>
@@ -140,7 +156,7 @@
                 </div>
 
                 <div class="resume-containerPadding resume-boxShadow" data-aos="zoom-in-left">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge blueText"></i>Education</h2>
+                    <h2 class=" w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge blueText"></i>Education</h2>
                     <div class="resume-containerPadding">
                         <a href="https://www.wgu.edu/" class="resume-links"><span class="resume-items">Western Governors University</span></a>
                         <h6 class="blueText"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2017 - May 2019 (Expected Graduation)</h6>
@@ -179,8 +195,20 @@
     </footer>
 
     <script>
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-black";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+            }
+        }
+
         function navFunction() {
-            var x = document.getElementById("navDemo");
+            var x = document.getElementById("smallNav");
             if (x.className.indexOf("w3-show") == -1) {
                 x.className += " w3-show";
             } else {

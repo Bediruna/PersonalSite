@@ -50,6 +50,7 @@
             background-color: #fff;
             font-size: 2em;
         }
+
         #OOPSec {
             background-color: #f2f2f2;
             font-size: 2em;
@@ -71,8 +72,8 @@
 
         .logosTitleText {
             font-family: 'Mina', sans-serif;
-            font-size:1.2em;
-            font-weight:bold;
+            font-size: 1.2em;
+            font-weight: bold;
         }
 
         #indexFooter {
@@ -83,6 +84,7 @@
             background-color: #cccccc;
             padding: 10px;
         }
+
         #buttonSec {
             /* The image used */
             background-image: url('bedir_img/OfficeDesk.jpg');
@@ -111,11 +113,10 @@
             border: 3px solid #3399ff;
         }
 
-        #resumeButton:hover {
-            background-color: #008CBA;
-            color: #fff;
-        }
-
+            #resumeButton:hover {
+                background-color: #008CBA;
+                color: #fff;
+            }
     </style>
 
 </head>
@@ -124,27 +125,25 @@
 
     <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-bar w3-text-white" id="myNavbar">
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <div class="bar w3-text-white" id="myNavbar">
+            <a class="bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
-            <a href="http://www.bedir.tech" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">BEDIR AYGUN</a>
-            <a href="projects.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-th"></i> PROJECTS</a>
-            <a href="resume.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-file-text"></i> RESUME</a>
-            <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="http://www.bedir.tech" class="bar-item w3-button w3-padding-large w3-hover-blue">BEDIR AYGUN</a>
+            <a href="projects.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-th"></i> PROJECTS</a>
+            <a href="resume.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-file-text"></i> RESUME</a>
+            <a href="contact.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-envelope"></i> CONTACT</a>
 
-            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" class="w3-bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-indigo"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/bediruna" class="w3-bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-indigo"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/bediruna" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-github"></i></a>
         </div>
     </div>
 
     <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="projects.html" class="w3-bar-item w3-button w3-padding-large">PROJECTS</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
-        <a href="resume.html" class="w3-bar-item w3-button w3-padding-large">RESUME</a>
+    <div id="smallNav" class="bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="projects.html" class="bar-item w3-button w3-padding-large">PROJECTS</a>
+        <a href="contact.html" class="bar-item w3-button w3-padding-large">CONTACT</a>
+        <a href="resume.html" class="bar-item w3-button w3-padding-large">RESUME</a>
     </div>
-
-
 
 
     <div class="parallax"><div id="titleText"></div></div>
@@ -168,7 +167,7 @@
                 <img src="bedir_img/CSharpLogo.png" class="logos" data-aos="zoom-in">
             </div>
         </div>
-        <br/><span>I began learning programming by teaching myself Java. Since then, I have taken many classes and built a foundation in Object-Orient Programming. My interest in game development lead me to C Sharp and the Unity Game Engine.</span>
+        <br /><span>I began learning programming by teaching myself Java. Since then, I have taken many classes and built a foundation in Object-Orient Programming. My interest in game development lead me to C Sharp and the Unity Game Engine.</span>
     </div>
 
     <div class="section" id="WebDevSec">
@@ -235,7 +234,7 @@
         }
 
         function navFunction() {
-            var x = document.getElementById("navDemo");
+            var x = document.getElementById("smallNav");
             if (x.className.indexOf("w3-show") == -1) {
                 x.className += " w3-show";
             } else {

@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="bedir_img/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="bedir_css/w3.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link href="https://fonts.googleapis.com/css?family=Oswald|Mina" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,7 +29,6 @@
             background-size: cover;
             text-align: center;
         }
-
     </style>
 
 </head>
@@ -38,24 +37,24 @@
 
     <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-bar w3-black w3-card">
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <div class="bar w3-text-white" id="myNavbar">
+            <a class="bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
-            <a href="http://www.bedir.tech" class="w3-bar-item w3-button w3-padding-large">BEDIR AYGUN</a>
-            <a href="projects.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><i class="fa fa-th"></i> PROJECTS</a>
-            <a href="resume.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><i class="fa fa-file-text"></i> RESUME</a>
-            <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="http://www.bedir.tech" class="bar-item w3-button w3-padding-large w3-hover-blue">BEDIR AYGUN</a>
+            <a href="projects.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-th"></i> PROJECTS</a>
+            <a href="resume.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-file-text"></i> RESUME</a>
+            <a href="contact.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-envelope"></i> CONTACT</a>
 
-            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" class="w3-bar-item w3-button w3-padding-large w3-right w3-hide-small"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/bediruna" class="w3-bar-item w3-button w3-padding-large w3-right w3-hide-small"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-indigo"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/bediruna" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-github"></i></a>
         </div>
     </div>
 
     <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="projects.html" class="w3-bar-item w3-button w3-padding-large">PROJECTS</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
-        <a href="resume.html" class="w3-bar-item w3-button w3-padding-large">RESUME</a>
+    <div id="smallNav" class="bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="projects.html" class="bar-item w3-button w3-padding-large">PROJECTS</a>
+        <a href="contact.html" class="bar-item w3-button w3-padding-large">CONTACT</a>
+        <a href="resume.html" class="bar-item w3-button w3-padding-large">RESUME</a>
     </div>
 
     <div id="buttonSec">
@@ -72,8 +71,19 @@
     </footer>
 
     <script>
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-black";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+            }
+        }
+
         function navFunction() {
-            var x = document.getElementById("navDemo");
+            var x = document.getElementById("smallNav");
             if (x.className.indexOf("w3-show") == -1) {
                 x.className += " w3-show";
             } else {
