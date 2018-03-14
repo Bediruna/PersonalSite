@@ -89,8 +89,12 @@
 
         function navFunction() {
             var x = document.getElementById("smallNav");
+            var navbar = document.getElementById("myNavbar");
+
             if (x.className.indexOf("w3-show") == -1) {
                 x.className += " w3-show";
+                navbar.className = "w3-bar" + " w3-card-2" + " w3-black";
+
             } else {
                 x.className = x.className.replace(" w3-show", "");
             }
