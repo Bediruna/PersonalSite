@@ -6,117 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bedir_css/w3.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto|Oswald|Mina'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="bedir_css/main.css">
-    <link href="bedir_css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="bedir_css/main.css">
+    <link rel="stylesheet" href="bedir_css/aos.css">
     <script src="bedir_js/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Mina" rel="stylesheet">
+    <script src="bedir_js/functions.js"></script>
 
     <style>
         .parallax {
             /* The image used */
             background-image: url('bedir_img/binaryWorld.jpg');
-            /* Full height */
-            height: 100%;
-            width: 100%;
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        #titleText {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-family: Consolas, monaco, monospace;
-            font-size: 3em;
-            font-weight: bold;
-        }
-
-        .section {
-            width: 100%;
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-family: 'Mina', sans-serif;
-        }
-
-        #introSec {
-            background-color: #fff;
-            font-size: 2em;
-        }
-
-        #OOPSec {
-            background-color: #f2f2f2;
-            font-size: 2em;
-        }
-
-        #WebDevSec {
-            background-color: #fff;
-            font-size: 2em;
-        }
-
-        #ITSec {
-            background-color: #f2f2f2;
-            font-size: 2em;
-        }
-
-        .logos {
-            padding: 10px;
-        }
-
-        .logosTitleText {
-            font-family: 'Mina', sans-serif;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        #indexFooter {
-            position: static;
-            bottom: 0;
-            text-align: center;
-            width: 100%;
-            background-color: #cccccc;
-            padding: 10px;
         }
 
         #buttonSec {
             /* The image used */
             background-image: url('bedir_img/OfficeDesk.jpg');
-            /* Full height */
-            height: 500px;
-            width: 100%;
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            text-align: center;
         }
-
-        #resumeButton {
-            padding: 16px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1em;
-            margin: 4px 2px;
-            -webkit-transition-duration: 0.4s; /* Safari */
-            transition-duration: 0.4s;
-            cursor: pointer;
-            color: #fff;
-            border: 3px solid #3399ff;
-        }
-
-            #resumeButton:hover {
-                background-color: #008CBA;
-                color: #fff;
-            }
     </style>
 
 </head>
@@ -210,43 +116,6 @@
         <a href="https://www.linkedin.com/in/bedir-aygun-52129596"><i class="fa fa-linkedin"></i></a>
     </div>
 
-    <script>
-        var i = 0;
-        var txt = 'WELCOME TO BEDIR.TECH';
-        var speed = 70;
-
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("titleText").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-
-        // Change style of navbar on scroll
-        window.onscroll = function () { navDarken() };
-        function navDarken() {
-            var navbar = document.getElementById("myNavbar");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-black";
-            } else {
-                navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
-            }
-        }
-
-        function navFunction() {
-            var x = document.getElementById("smallNav");
-            var navbar = document.getElementById("myNavbar");
-
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-                navbar.className = "w3-bar" + " w3-card-2" + " w3-black";
-
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-    </script>
     <script>
         AOS.init({
             duration: 1200,

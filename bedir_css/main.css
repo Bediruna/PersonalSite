@@ -6,11 +6,13 @@ body, html {
     height: 100%;
 }
 
-.navBar {
-    background-color: black;
-    color: white;
-    width: 100%;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0, 0.16);
+#myNavBar {
+    width: 100%
+}
+
+
+.w3-bar a {
+    font-size: 1.1em;
 }
 
 footer {
@@ -63,6 +65,105 @@ footer {
 
 /*-----Index Page-----*/
 
+.parallax {
+    /* Full height */
+    height: 100%;
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: Consolas, monaco, monospace;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.section {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Mina', sans-serif;
+}
+
+#introSec {
+    background-color: #fff;
+    font-size: 2em;
+}
+
+#OOPSec {
+    background-color: #f2f2f2;
+    font-size: 2em;
+}
+
+#WebDevSec {
+    background-color: #fff;
+    font-size: 2em;
+}
+
+#ITSec {
+    background-color: #f2f2f2;
+    font-size: 2em;
+}
+
+.logos {
+    padding: 10px;
+}
+
+.logosTitleText {
+    font-family: 'Mina', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#indexFooter {
+    position: static;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #cccccc;
+    padding: 10px;
+}
+
+#buttonSec {
+    /* Full height */
+    height: 500px;
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#resumeButton {
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: #fff;
+    border: 3px solid #3399ff;
+}
+
+    #resumeButton:hover {
+        background-color: #008CBA;
+        color: #fff;
+    }
 
 
 

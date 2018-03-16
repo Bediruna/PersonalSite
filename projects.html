@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bedir_css/w3.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Mina" rel="stylesheet">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto|Oswald|Mina'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="bedir_css/main.css">
-    <link href="bedir_css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="bedir_css/main.css">
+    <link rel="stylesheet" href="bedir_css/aos.css">
     <script src="bedir_js/aos.js"></script>
+    <script src="bedir_js/functions.js"></script>
 
 
     <style>
@@ -74,31 +74,5 @@
         <a href="https://github.com/bediruna"><i class="fa fa-github"></i></a>
         <a href="https://www.linkedin.com/in/bedir-aygun-52129596"><i class="fa fa-linkedin"></i></a>
     </footer>
-
-    <script>
-        // Change style of navbar on scroll
-        window.onscroll = function () { navDarken() };
-        function navDarken() {
-            var navbar = document.getElementById("myNavbar");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-black";
-            } else {
-                navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
-            }
-        }
-
-        function navFunction() {
-            var x = document.getElementById("smallNav");
-            var navbar = document.getElementById("myNavbar");
-
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-                navbar.className = "w3-bar" + " w3-card-2" + " w3-black";
-
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-    </script>
 </body>
 </html>
