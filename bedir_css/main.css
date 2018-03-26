@@ -6,10 +6,16 @@ body, html {
     height: 100%;
 }
 
-#myNavBar {
-    width: 100%
+.bar {
+    color: #fff !important;
 }
 
+.navTop {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
 
 .w3-bar a {
     font-size: 1.1em;
@@ -62,6 +68,58 @@ footer {
 .bar-block.w3-center .bar-item {
     text-align: center
 }
+
+ .navButton {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.w3-dropdown-hover:hover > .navButton:first-child, .w3-dropdown-click:hover > .navButton:first-child {
+    background-color: #ccc;
+    color: #000
+}
+
+.w3-bar-block .w3-dropdown-hover, .w3-bar-block .w3-dropdown-click {
+    width: 100%
+}
+
+    .w3-bar-block .w3-dropdown-hover .w3-dropdown-content, .w3-bar-block .w3-dropdown-click .w3-dropdown-content {
+        min-width: 100%
+    }
+
+    .w3-bar-block .w3-dropdown-hover .navButton, .w3-bar-block .w3-dropdown-click .navButton {
+        width: 100%;
+        text-align: left;
+        padding: 8px 16px
+    }
+
+
+.bar .navButton {
+    white-space: normal
+}
+
+
+@media (max-width:600px) {
+    .w3-dropdown-hover.w3-mobile .navButton, .w3-dropdown-click.w3-mobile .navButton {
+        width: 100%
+    }
+}
+
+.navButton:hover {
+    color: #fff !important;
+    background-color: #2196F3 !important;
+}
+
+
 
 /*-----Index Page-----*/
 
@@ -123,15 +181,6 @@ footer {
     font-family: 'Mina', sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-}
-
-#indexFooter {
-    position: static;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    background-color: #cccccc;
-    padding: 10px;
 }
 
 #buttonSec {
