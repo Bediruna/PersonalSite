@@ -45,6 +45,8 @@
 
     </div>
 
+    <audio id="heehee" src="mj/HeeHee.mp3"></audio>
+
     <!--Script for the game-->
     <script>
 
@@ -63,6 +65,8 @@
         image[5] = document.getElementById('mj6');
         image[6] = document.getElementById('mj7');
         var imageIndex = 0;
+
+        var audio = document.getElementById('heehee');
 
         var myWindowSize;
 
@@ -95,6 +99,8 @@
             //sets and interval that calls game function 120 times a second.
             setInterval(playGame, 1000 / 120);
 
+            
+
         }
 
         window.onresize = function () {
@@ -108,15 +114,14 @@
         var floorHeight = myWindowSize * .8;
 
         //player variables
-        var playerHeight = playerWidth = relativePx(70);
+        var playerWidth = relativePx(40);
+        var playerHeight = relativePx(140);
         var playerX = relativePx(450);
         var playerY = relativePx(500);
         var playerSpeed = relativePx(7);
         var jumpHeight = relativePx(100);
         var gravity = relativePx(2);
         var playerDirection = "null";
-        var playerCollideLeft = false;
-        var playerCollideRight = false;
 
         function initializeVariables() {
 
@@ -129,16 +134,14 @@
 
             floorHeight = myWindowSize * .8;
 
-            playerWidth = relativePx(70);
-            playerHeight = relativePx(20);
-            playerX = relativePx(125);
-            playerY = floorHeight - playerHeight;
-            playerSpeed = relativePx(7);            //-----danger reseting player position on resize
+            playerWidth = relativePx(40);
+            playerHeight = relativePx(140);
+            playerX = relativePx(450);
+            playerY = relativePx(500);
+            playerSpeed = relativePx(7);
             jumpHeight = relativePx(100);
             gravity = relativePx(2);
             playerDirection = "null";
-            playerCollideLeft = false;
-            playerCollideRight = false;
 
         }
 
@@ -231,6 +234,8 @@
                 playerX -= playerSpeed;
                 playerDirection = "left";
 
+                audio.play();
+
             } else { playerDirection = "null"; }
 
             //up
@@ -261,6 +266,15 @@
             //down
             if (map[83] || map[40]) {
 
+            }
+
+            //wrap
+            if (playerX < -50) {
+                playerX = myWindowSize + 50;
+            }
+            else if (playerX > myWindowSize+60) {
+
+                playerX = -50;
             }
 
         }
