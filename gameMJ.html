@@ -156,8 +156,6 @@
                 if (playerX + playerWidth > x && playerX < x + width &&
                     playerY < y + height && playerY + playerHeight > y) {
 
-                    console.log("collision");
-
                     if (playerDirection == "right") {
                         playerX -= playerSpeed * 1.1;
                     }
@@ -228,13 +226,33 @@
             }
 
             //--Player controls--
-            //left
-            if (map[65] || map[37]) {
+            function moveRight() {
+
+                playerX += playerSpeed;
+                playerDirection = "right";
+
+
+                if (playerX % 12 > 11) {
+                    imageIndex++;
+                }
+
+                if (imageIndex >= 6) {
+                    imageIndex = 0;
+                }
+
+            }
+
+            function moveLeft() {
 
                 playerX -= playerSpeed;
                 playerDirection = "left";
 
                 audio.play();
+            }
+            //left
+            if (map[65] || map[37]) {
+
+                moveLeft();
 
             } else { playerDirection = "null"; }
 
@@ -249,19 +267,36 @@
             //right
             if (map[68] || map[39]) {
 
-                playerX += playerSpeed;
-                playerDirection = "right";
-
-
-                if (playerX % 12 > 11) {
-                    imageIndex++;
-                }
-                
-                if (imageIndex >= 6) {
-                    imageIndex = 0;
-                }
+                moveRight();
 
             } else { playerDirection = "null"; }
+
+            //var clickedRight;
+
+            document.onmousedown = function (e) {
+                if (e.clientX < (myWindowSize / 2)) {
+                    clickedLeft = true;
+                }
+
+                if (e.clientX > (myWindowSize / 2)) {
+                    clickedRight = true;
+                }
+            };
+
+            function resetClicks() {
+                clickedLeft = false;
+                clickedRight = false;
+            }
+
+            document.onmouseup = function (e) {
+
+                resetClicks();
+            };
+
+            
+
+            if (clickedRight) { moveRight(); }
+            if (clickedLeft) { moveLeft(); }
 
             //down
             if (map[83] || map[40]) {
