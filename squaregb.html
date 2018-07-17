@@ -92,11 +92,13 @@
         var playerX = relativePx(125);
         var playerY = floorHeight - playerHeight;
         var playerSpeed = relativePx(7);
-        var jumpHeight = relativePx(100);
+        var jumpHeight = relativePx(120);
         var gravity = relativePx(2);
-        var playerDirection = "null";
-        var playerCollideLeft = false;
-        var playerCollideRight = false;
+        var playerXDirection = "null";
+        var playerYDirection = "null";
+        var playerRed = 250;
+        var playerGreen = 250;
+        var playerBlue = 250;
 
         function initializeVariables() {
 
@@ -113,9 +115,10 @@
             playerX = relativePx(125);
             playerY = floorHeight - playerHeight;
             playerSpeed = relativePx(7);            //-----danger reseting player position on resize
-            jumpHeight = relativePx(100);
+            jumpHeight = relativePx(120);
             gravity = relativePx(2);
-            playerDirection = "null";
+            playerXDirection = "null";
+            playerYDirection = "null";
             playerCollideLeft = false;
             playerCollideRight = false;
 
@@ -132,16 +135,23 @@
                 if (playerX + playerWidth > x && playerX < x + width &&
                     playerY < y + height && playerY + playerHeight > y) {
 
-                    console.log("collision");
 
-                    if (playerDirection == "right") {
-                        playerX -= playerSpeed * 1.1;
+                    if (playerYDirection == "down") {
+                        playerY = y - playerHeight;
+                        onPlatform = true;
+                    } else { onPlatform = false; }
+
+                    if (playerYDirection == "up") {
+                        playerY = y + height;
+                        underPlatform = true;
+                    } else { underPlatform = false; }
+
+                    if (playerXDirection == "right" && !onPlatform && !underPlatform) {
+                        playerX = x - playerWidth;
                     }
-                    if (playerDirection == "left") {
-                        playerX += playerSpeed * 1.1;
-                    }
-                    if (playerDirection == "down") {
-                        playerY = y + playerHeight;
+
+                    if (playerXDirection == "left" && !onPlatform && !underPlatform) {
+                        playerX = x + width;
                     }
 
                 }
@@ -154,35 +164,159 @@
 
         };
 
+
         var plat1 = new Platform("red");
+        var plat2 = new Platform("red");
 
         function drawPlatforms() {
 
-            plat1.draw(relativePx(350), relativePx(750), relativePx(70), relativePx(20), );
+            plat1.draw(relativePx(350), relativePx(730), relativePx(70), relativePx(20));
+            plat2.draw(relativePx(550), relativePx(700), relativePx(70), relativePx(20));
 
         }
 
 
+        function Food(color, eaten) {
+            this.color = color;
+            this.eaten = eaten;
+            eaten = false;
+
+            this.draw = function (x, y, width, height) {
+
+                if (playerX + playerWidth > x && playerX < x + width &&
+                    playerY < y + height && playerY + playerHeight > y) {
+
+                    if (!eaten) {
+                        switch (color) {
+
+                            case "red":
+                                                                
+                                if (playerRed <= 200) { playerRed += 50;}
+                                if (playerGreen > 0) { playerGreen -= 50;}
+                                if (playerBlue > 0) { playerBlue -= 50; }
+
+                                jumpHeight += relativePx(10);
+                                break;
+
+                            case "green":
+
+                                if (playerRed > 0) { playerRed -= 50; }
+                                if (playerGreen <= 200) { playerGreen += 50; }
+                                if (playerBlue > 0) { playerBlue -= 50; }
+
+                                playerSpeed += relativePx(10);
+                                break;
+
+                            case "blue":
+
+                                if (playerRed > 0) { playerRed -= 50; }
+                                if (playerGreen > 0) { playerGreen -= 50; }
+                                if (playerBlue <= 200) { playerBlue += 50; }
+
+                                playerWidth += relativePx(10);
+                                playerHeight += relativePx(10);
+                                break;
+                        }
+                    }
+                    eaten = true;
+                    console.log("red: " + playerRed +  "\ngreen: " + playerGreen + "\nBlue: " + playerBlue);
+
+                }
+                if (!eaten) {
+
+                    ctx.fillStyle = color;
+                    ctx.fillRect(x, y, width, height);
+
+                }
+            }
+
+        };
+
+        var f1 = new Food("blue", false);
+        var f2 = new Food("blue", false);
+        var f3 = new Food("blue", false);
+
+        var f4 = new Food("red", false);
+        var f5 = new Food("red", false);
+        var f6 = new Food("red", false);
+
+        var f7 = new Food("red", false);
+        var f8 = new Food("red", false);
+        var f9 = new Food("red", false);
+
+
+        function drawFood() {
+
+            f1.draw(relativePx(200), relativePx(750), relativePx(20), relativePx(20));
+            f2.draw(relativePx(300), relativePx(750), relativePx(20), relativePx(20));
+            f3.draw(relativePx(400), relativePx(750), relativePx(20), relativePx(20));
+
+            f4.draw(relativePx(500), relativePx(750), relativePx(20), relativePx(20));
+            f5.draw(relativePx(600), relativePx(750), relativePx(20), relativePx(20));
+            f6.draw(relativePx(700), relativePx(750), relativePx(20), relativePx(20));
+
+            f7.draw(relativePx(800), relativePx(750), relativePx(20), relativePx(20));
+            f8.draw(relativePx(900), relativePx(750), relativePx(20), relativePx(20));
+            f9.draw(relativePx(950), relativePx(750), relativePx(20), relativePx(20));
+        }
+
         function playGame() {
 
             //fill style is black for background
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "white";
 
             //create rectangle starting from 0
             ctx.fillRect(0, 0, myWindowSize, myWindowSize);
 
-            drawPlatforms();
+            /*
+            ctx.font = relativePx(30) + "px Arial";
+            ctx.fillStyle = "red";
+            ctx.fillText( parseInt((playerRed / 6) + ((200 - playerGreen) / 6) + ((200 - playerBlue) / 6)) + "%", relativePx(5), relativePx(30));
 
-            //draw moon
+            ctx.fillStyle = "green";
+            ctx.fillText(parseInt((playerGreen / 6) + ((200 - playerRed) / 6) + ((200 - playerBlue) / 6) ) + "%", relativePx(5), relativePx(60));
+
+            ctx.fillStyle = "blue";
+            ctx.fillText(parseInt((playerBlue / 6) + ((200 - playerGreen) / 6) + ((200 - playerRed) / 6)) + "%", relativePx(5), relativePx(90));
+            */
+            function indicatorPos() {
+
+            }
+
+            var grd = ctx.createLinearGradient(0, 0, 200, 0);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(.167, "orange");
+            grd.addColorStop(.33, "yellow");
+            grd.addColorStop(.5, "green");
+            grd.addColorStop(.667, "blue");
+            grd.addColorStop(.83, "indigo");
+            grd.addColorStop(1, "violet");
+
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(0, 10, 200, 80);
+
+
+            ctx.beginPath();
+            ctx.arc(relativePx(10), relativePx(10), relativePx(5), 0, 2 * Math.PI, false);
+            ctx.stroke();
+            ctx.fillStyle = "black";
+            ctx.fill();
+
+            //drawPlatforms();
+
+            drawFood();
+
+            //draw sun
             ctx.beginPath();
             ctx.arc(relativePx(500), relativePx(100), relativePx(50), 0, 2 * Math.PI, false);
             ctx.stroke();
-            ctx.fillStyle = "white";
+            ctx.fillStyle = "yellow";
             ctx.fill();
 
 
             //draw floor line
-            ctx.strokeStyle = 'white';
+            ctx.strokeStyle = "black";
             ctx.beginPath();
             ctx.moveTo(0, floorHeight);
             ctx.lineWidth = relativePx(5);
@@ -190,46 +324,61 @@
             ctx.stroke();
 
             //draw player
-            ctx.fillStyle = "rgb(250, 250, 250)";
-            ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
+            ctx.fillStyle = "rgb(" + playerRed + ", " + playerGreen + ", " + playerBlue + ")";
+
+            ctx.rect(playerX, playerY, playerWidth, playerHeight);
+            ctx.fill();
+            ctx.stroke();
 
 
             //Gravity
             if (playerY < floorHeight - playerHeight) {
-                playerDirection = "down";
+                playerYDirection = "down";
                 playerY += gravity;
             } else {
                 playerY = floorHeight - playerHeight;
+                playerYDirection = "null";
             }
 
             //--Player controls--
             //left
             if (map[65] || map[37]) {
 
+                playerXDirection = "left";
                 playerX -= playerSpeed;
-                playerDirection = "left";
 
-            } else { playerDirection = "null"; }
+            }
 
             //up
             if (map[87] || map[38] || map[32]) {
 
                 if (playerY == floorHeight - playerHeight) {
                     playerY -= jumpHeight;
+                    playerYDirection = "up";
                 }
             }
 
             //right
             if (map[68] || map[39]) {
 
+                playerXDirection = "right";
                 playerX += playerSpeed;
-                playerDirection = "right";
 
-            } else { playerDirection = "null"; }
+            }
 
             //down
             if (map[83] || map[40]) {
 
+            }
+
+
+            //wrap
+            if (playerX < -50) {
+                playerX = myWindowSize + 50;
+            }
+            else if (playerX > myWindowSize + 60) {
+
+                playerX = -50;
             }
 
         }
