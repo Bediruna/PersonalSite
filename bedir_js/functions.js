@@ -1,5 +1,5 @@
 ﻿var i = 0;
-var txt = 'WELCOME TO BEDIR.TECH';
+var txt = 'WELCOME TO BEDIR.DEV';
 var speed = 70;
 
 function typeWriter() {
