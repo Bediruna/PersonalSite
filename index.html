@@ -1,17 +1,19 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>Bedir Aygun</title>
     <link rel="shortcut icon" href="bedir_img/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bedir_css/w3.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto|Oswald|Mina'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto|Oswald|Mina'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="bedir_css/main.css">
     <link rel="stylesheet" href="bedir_css/aos.css">
     <script src="bedir_js/aos.js"></script>
     <script src="bedir_js/functions.js"></script>
+    <script src="bedir_js/jquery-3.4.1.min.js"></script>
 
     <style>
         .parallax {
@@ -23,16 +25,48 @@
             /* The image used */
             background-image: url('bedir_img/OfficeDesk.jpg');
         }
+
+        #tes1 {
+            height: 100%;
+            background-color: yellow;
+        }
+
+        #img1 {
+            z-index: 1;
+            position: absolute;
+        }
+
+        #img2 {
+            z-index: 2;
+            position: absolute;
+        }
+
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116120559-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-116120559-1');
+        $(document).ready(function() {
+            var copyRightDate = new Date();
+            var crYear = copyRightDate.getFullYear();
+            $("#crYear").text(crYear);
+
+//            setInterval(function() {
+//                $('#tes1').css('background', '#C89CBD').fadeIn(2000);
+//            }, 1000);
+//            $('#tes1').fadeOut(500, function() {
+//                $(this).css('background', bg).fadeIn(2000);
+//            });
+        });
+
     </script>
 
 </head>
@@ -46,26 +80,37 @@
 
             <a href="http://www.bedir.tech" class="bar-item w3-button w3-padding-large w3-hover-blue">BEDIR AYGUN</a>
             <a href="resume.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-file-text"></i> RESUME</a>
+            <a href="projects.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-code-fork"></i> PROJECTS</a>
 
-            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-indigo"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/bediruna" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-github"></i></a>
+
+            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" target="_blank" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-indigo"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/bediruna" target="_blank" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-github"></i></a>
         </div>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="smallNav" class="bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
         <a href="resume.html" class="bar-item w3-button w3-padding-large">RESUME</a>
+        <a href="projects.html" class="bar-item w3-button w3-padding-large">PROJECTS</a>
     </div>
 
 
-    <div class="parallax"><div id="titleText"></div></div>
+    <div class="parallax">
+        <div id="titleText"></div>
+    </div>
+<!--
+    <div id="tes1">
+        <img src="bedir_img/tes1.png" id="img1" />
+        <img src="bedir_img/tes1.png" id="img2" />
+    </div>
+-->
 
 
 
     <div class="section" id="introSec">
         <div>
-            <h1 style="font-family: 'Oswald', sans-serif;">SOFTWARE DEVELOPMENT IS MY PASSION</h1>
-            <span style="font-family: Arial, Helvetica, sans-serif;">I love to develop unique and effective software. I have experience in various programming languages. Including object oriented programming language for complex software and games, and web development languages. I use my experience in information technology to tie these technologies together.</span>
+            <h1 style="font-family: 'Oswald', sans-serif;">ABOUT ME</h1>
+            <span style="font-family: Arial, Helvetica, sans-serif;">I am a software developer with experience in object-oriented programming, full stack web development, automation, and information technology. I have an Associate's degree in Computer and Information Sciences and I am currently completing my Bachelor of Science in software development. In addition to what I already know, I am happy to be constantly improving my skills and learning new things.</span>
             <br />
         </div>
     </div>
@@ -79,7 +124,7 @@
                 <img src="bedir_img/CSharpLogo.png" class="logos" data-aos="zoom-in">
             </div>
         </div>
-        <br /><span>I began learning programming by teaching myself Java. Since then, I have taken many classes and built a foundation in Object-Orient Programming. My interest in game development lead me to C Sharp and the Unity Game Engine.</span>
+        <br /><span>I love to develop unique and effective software. I began learning programming by teaching myself Java. Since then, I have taken many classes and built a foundation in Object-Orient Programming. My interest in game development lead me to C Sharp and the Unity Game Engine.</span>
     </div>
 
     <div class="section" id="WebDevSec">
@@ -92,20 +137,19 @@
                 <img src="bedir_img/JSLogo.png" class="logos" data-aos="zoom-in">
             </div>
         </div>
-        <br /><span>With a CIW Advanced HTML5 and CSS3 Specialist certification, I have knowledge of HTML5, CSS3 and JavaScript. These technologies are known as the Web development trifecta. Together, they are able to produce fluid and dynamic Web pages that easily adapt to smartphones, tablets, gaming devices and smart TVs, as well as to traditional PCs.</span>
+        <br /><span>From building simple websites, to complex user portals for critical systems I have experience using the full stack of technologies. With a CIW Advanced HTML5 and CSS3 Specialist certification, I have knowledge of HTML5, CSS3 and JavaScript. I also have demonstrated experience with PHP, MySQL, JSON, jQuery, and AJAX.</span>
     </div>
 
     <div class="section" id="ITSec">
         <div style="display:inline-block; padding:10px" data-aos="flip-left">
-            <span class="logosTitleText">Information Technology</span>
+            <span class="logosTitleText">Automation & Information Technology</span>
             <div style="padding-top: 20px; padding-bottom:20px">
                 <img src="bedir_img/CompTIALogo.png" class="logos" data-aos="zoom-in">
                 <img src="bedir_img/ComputerRepairLogo.png" class="logos" data-aos="zoom-in">
-                <img src="bedir_img/Windows10Logo.png" class="logos" data-aos="zoom-in">
                 <img src="bedir_img/ConnectedLogo.png" class="logos" data-aos="zoom-in">
             </div>
         </div>
-        <br /><span>Hands on experience in the IT field along with a CompTIA A+ Certification has given me the skills and insight needed to navigate the technological work place.</span>
+        <br /><span>Hands on experience as well as an A+ certification in the IT field has given me the skills and insight needed to navigate the technological work place. When I'm not working on software projects, I enjoy writing and deploying scripts that make everyday work quicker and more precise. See some of my projects <a href="projects.html">here</a>.</span>
     </div>
 
     <div id="buttonSec">
@@ -118,17 +162,19 @@
     <footer>
         <p>
             Bedir Aygun
-            <a href="https://github.com/bediruna"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/bedir-aygun-52129596"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/bediruna" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" target="_blank"><i class="fa fa-linkedin"></i></a>
         </p>
-        <p>Copyright &copy; 2018</p>
-        
+        <p>Copyright &copy; <span id="crYear"></span></p>
+
     </footer>
 
     <script>
         AOS.init({
             duration: 1200,
         })
+
     </script>
 </body>
+
 </html>
