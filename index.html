@@ -1,180 +1,126 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 
 <head>
-    <title>Bedir Aygun</title>
-    <link rel="shortcut icon" href="bedir_img/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bedir_css/w3.css">
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto|Oswald|Mina'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bedir_css/main.css">
-    <link rel="stylesheet" href="bedir_css/aos.css">
-    <script src="bedir_js/aos.js"></script>
-    <script src="bedir_js/functions.js"></script>
-    <script src="bedir_js/jquery-3.4.1.min.js"></script>
-
-    <style>
-        .parallax {
-            /* The image used */
-            background-image: url('bedir_img/binaryWorld.jpg');
-        }
-
-        #buttonSec {
-            /* The image used */
-            background-image: url('bedir_img/OfficeDesk.jpg');
-        }
-
-        #tes1 {
-            height: 100%;
-            background-color: yellow;
-        }
-
-        #img1 {
-            z-index: 1;
-            position: absolute;
-        }
-
-        #img2 {
-            z-index: 2;
-            position: absolute;
-        }
-
-    </style>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116120559-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-116120559-1');
-        $(document).ready(function() {
-            var copyRightDate = new Date();
-            var crYear = copyRightDate.getFullYear();
-            $("#crYear").text(crYear);
-
-//            setInterval(function() {
-//                $('#tes1').css('background', '#C89CBD').fadeIn(2000);
-//            }, 1000);
-//            $('#tes1').fadeOut(500, function() {
-//                $(this).css('background', bg).fadeIn(2000);
-//            });
-        });
-
-    </script>
-
+	<title>Bedir Aygun</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
-<body onload="typeWriter()" style="height:100%;">
+<body class="is-preload">
 
-    <!-- Navbar -->
-    <div class="navTop">
-        <div class="bar" id="myNavbar">
-            <a class="bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+	<!-- Wrapper -->
+	<div id="wrapper" class="fade-in">
 
-            <a href="http://www.bedir.dev" class="bar-item w3-button w3-padding-large w3-hover-blue">BEDIR AYGUN</a>
-            <a href="resume.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-file-text"></i> RESUME</a>
-            <a href="projects.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fa fa-code-fork"></i> PROJECTS</a>
+		<!-- Intro -->
+		<div id="intro">
+			<h1>Bedir<br />Aygun</h1>
+			<p>Developer / Designer / Explorer</p>
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			</ul>
+		</div>
 
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Bedir Aygun</a>
+		</header>
 
-            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" target="_blank" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-indigo"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/bediruna" target="_blank" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-dark-grey"><i class="fa fa-github"></i></a>
-        </div>
-    </div>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="index.html">About me</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="resume.html">Resume</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://stackoverflow.com/users/10740446/bedir" class="icon brands fa-stack-overflow"><span class="label">Stack Overflow</span></a></li>
+				<li><a href="https://www.linkedin.com/in/bedir-aygun" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/bediruna" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
 
-    <!-- Navbar on small screens -->
-    <div id="smallNav" class="bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="resume.html" class="bar-item w3-button w3-padding-large">RESUME</a>
-        <a href="projects.html" class="bar-item w3-button w3-padding-large">PROJECTS</a>
-    </div>
+		<!-- Main -->
+		<div id="main">			
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Developer</h1>
+                    <p>As a developer, I love to develop efficient and<br /> effective solutions<br /> to meet modern needs.</p>
+                </header>
+                <div class="image main"><img src="images/pic01.jpg" alt="" /></div>
+                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur
+                    id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant
+                    morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam
+                    venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque
+                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis
+                    in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+            </section>
+		</div>
 
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+			</section>
+			<section class="split contact">
+				<section>
+					<h3>Email</h3>
+					<p><a href="#">info@untitled.tld</a></p>
+				</section>
+				<section>
+					<h3>Links</h3>
+					<ul class="icons alt">
+						<li><a href="#" class="icon brands alt fa-stack-overflow"><span class="label">Stack
+									Overflow</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
 
-    <div class="parallax">
-        <div id="titleText"></div>
-    </div>
-<!--
-    <div id="tes1">
-        <img src="bedir_img/tes1.png" id="img1" />
-        <img src="bedir_img/tes1.png" id="img2" />
-    </div>
--->
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
 
+	</div>
 
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-    <div class="section" id="introSec">
-        <div>
-            <h1 style="font-family: 'Oswald', sans-serif;">ABOUT ME</h1>
-            <span style="font-family: Arial, Helvetica, sans-serif;">I am a software developer with experience in object-oriented programming, full stack web development, automation, and information technology. I have an Associate's degree in Computer and Information Sciences and I am currently completing my Bachelor of Science in software development. In addition to what I already know, I am happy to be constantly improving my skills and learning new things.</span>
-            <br />
-        </div>
-    </div>
-
-    <div class="section" id="OOPSec">
-        <div style="display:inline-block; padding:10px" data-aos="flip-left">
-            <span class="logosTitleText">Object-Oriented Programming</span>
-            <div style="padding-top: 20px; padding-bottom:20px">
-                <img src="bedir_img/JavaLogo.png" class="logos" data-aos="zoom-in">
-                <img src="bedir_img/CPPLogo.png" class="logos" data-aos="zoom-in">
-                <img src="bedir_img/CSharpLogo.png" class="logos" data-aos="zoom-in">
-            </div>
-        </div>
-        <br /><span>I love to develop unique and effective software. I began learning programming by teaching myself Java. Since then, I have taken many classes and built a foundation in Object-Orient Programming. My interest in game development lead me to C Sharp and the Unity Game Engine.</span>
-    </div>
-
-    <div class="section" id="WebDevSec">
-        <div style="display:inline-block; padding:0px" data-aos="flip-left">
-            <span class="logosTitleText">Web Development</span>
-            <div style="padding-top: 20px; padding-bottom:20px">
-                <img src="bedir_img/CIWLogo.png" class="logos" data-aos="zoom-in">
-                <img src="bedir_img/HTML5Logo.png" class="logos" data-aos="zoom-in">
-                <img src="bedir_img/CSS3Logo.png" class="logos" data-aos="zoom-in">
-                <img src="bedir_img/JSLogo.png" class="logos" data-aos="zoom-in">
-            </div>
-        </div>
-        <br /><span>From building simple websites, to complex user portals for critical systems I have experience using the full stack of technologies. With a CIW Advanced HTML5 and CSS3 Specialist certification, I have knowledge of HTML5, CSS3 and JavaScript. I also have demonstrated experience with PHP, MySQL, JSON, jQuery, and AJAX.</span>
-    </div>
-
-    <div class="section" id="ITSec">
-        <div style="display:inline-block; padding:10px" data-aos="flip-left">
-            <span class="logosTitleText">Automation & Information Technology</span>
-            <div style="padding-top: 20px; padding-bottom:20px">
-                <img src="bedir_img/CompTIALogo.png" class="logos" data-aos="zoom-in">
-                <img src="bedir_img/ComputerRepairLogo.png" class="logos" data-aos="zoom-in">
-                <img src="bedir_img/ConnectedLogo.png" class="logos" data-aos="zoom-in">
-            </div>
-        </div>
-        <br /><span>Hands on experience as well as an A+ certification in the IT field has given me the skills and insight needed to navigate the technological work place. When I'm not working on software projects, I enjoy writing and deploying scripts that make everyday work quicker and more precise. See some of my projects <a href="projects.html">here</a>.</span>
-    </div>
-
-    <div id="buttonSec">
-        <div style="position: relative; padding-top:100px; color: #fff; font-family: Consolas, monaco, monospace; font-size: 3em; font-weight: bold;">
-            <span>SEE MORE DETAILS</span><br />
-            <a href="resume.html" id="resumeButton">RESUM&#xC9;</a>
-        </div>
-    </div>
-
-    <footer>
-        <p>
-            Bedir Aygun
-            <a href="https://github.com/bediruna" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/bedir-aygun-52129596" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>Copyright &copy; <span id="crYear"></span></p>
-
-    </footer>
-
-    <script>
-        AOS.init({
-            duration: 1200,
-        })
-
-    </script>
 </body>
 
 </html>
