@@ -1,204 +1,177 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE html>
 <html>
-
 <head>
-	<title>Bedir Aygun</title>
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <title>Bedir Aygun</title>
+    <link rel="shortcut icon" href="bedir_img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bedir_css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Oswald|Mina">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="bedir_css/main.css">
+    <link rel="stylesheet" href="bedir_css/aos.css">
+    <script src="bedir_js/jquery-3.4.1.min.js"></script>
+    <script src="bedir_js/aos.js"></script>
+    <script src="bedir_js/functions.js"></script>
+
+
+    <style>
+		
+        .mainContent {
+            /* The image used */
+            background-image: url('bedir_img/splash.jpg');
+            height:auto;
+			
+			
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+			background-repeat: repeat-y;
+            background-size: cover;
+        }
+		
+    </style>
+
 </head>
 
-<body class="is-preload">
+<body>
+    <!-- Navbar -->
+    <div class="navTop">
+        <div class="bar" id="myNavbar">
+            <a class="bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="navFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
-	<!-- Wrapper -->
-	<div id="wrapper" class="fade-in">
+            <a href="http://www.bedir.dev" class="bar-item w3-button w3-padding-large w3-hover-blue">BEDIR AYGUN</a>
+            <a href="resume.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fas fa-file"></i> RESUME</a>
+            <a href="projects.html" class="bar-item w3-button w3-padding-large w3-hide-small w3-hover-blue"><i class="fas fa-project-diagram"></i> PROJECTS</a>
 
-		<!-- Intro -->
-		<div id="intro">
-			<h1>Bedir<br />Aygun</h1>
-			<p>Developer / Designer / Explorer</p>
-			<ul class="actions">
-				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-			</ul>
+            <a href="https://www.linkedin.com/in/bedir-aygun" target="_blank" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-indigo"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/bediruna" target="_blank" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-dark-grey"><i class="fab fa-github"></i></a>
+            <a href="https://stackoverflow.com/users/10740446/bedir" target="_blank" class="bar-item w3-button w3-padding-large w3-right w3-hide-small w3-hover-orange"><i class="fab fa-stack-overflow"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="smallNav" class="bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="resume.html" class="bar-item w3-button w3-padding-large">RESUME</a>
+        <a href="projects.html" class="bar-item w3-button w3-padding-large">PROJECTS</a>
+    </div>
+
+
+    <div class="mainContent">
+
+
+        <div style="text-align:center; color: #fff; font-family: Consolas, monaco, monospace;">
+            <br /><br />
+            <h2>My Projects</h2>
+            <p>Here are some of the projects I am either working on or have completed</p>
+        </div>
+        	
+		
+		<!-- First Row-->
+		<div class="w3-row-padding">
+			<div class="w3-third w3-container w3-margin-bottom">
+				<a href="https://play.google.com/store/apps/details?id=com.ABedirApp.studentplannerxamarin" target="_blank"><img src="bedir_vid/studentPlanner.gif" alt="Page Screenshot" style="width:100%" class="w3-hover-opacity"></a>
+				<div class="w3-container w3-white">
+					<p><b>Student Planner Xamarin App</b></p>
+					<p>Mobile application made using Xamarin. Stores and tracks term, class, and assignment information. Published to play store, click to download.</p>
+				</div>
+			</div>
+			<div class="w3-third w3-container" style="padding-bottom: 15px">
+				<a href="https://github.com/Bediruna/ABedirUniversity" target="_blank"><img src="bedir_vid/ABedirUniversity.gif" alt="Project Screenshot" style="width:100%" class="w3-hover-opacity"></a>
+				<div class="w3-container w3-white">
+					<p><b>A Bedir University</b></p>
+					<p>A custom university portal meant for accepting student applications, student portal, and admin portal. Built using ASP.NET C# and web technologies.</p>
+				</div>
+			</div>
+			<div class="w3-third w3-container w3-margin-bottom">
+				<a href="http://www.nourlimousine.com/" target="_blank"><img src="bedir_vid/nourLimousine.gif" alt="Project Screenshot" style="width:100%" class="w3-hover-opacity"></a>
+				<div class="w3-container w3-white">
+					<p><b>Nour Limousine</b></p>
+					<p>Website created for a limousine service based in New York. Created using CSS, HTML, and JavaScript.</p>
+				</div>
+			</div>
 		</div>
-
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="logo">Bedir Aygun</a>
-		</header>
-
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="index.html">About me</a></li>
-				<li class="active"><a href="projects.html">Projects</a></li>
-				<li><a href="resume.html">Resume</a></li>
-			</ul>
-			<ul class="icons">
-				<li><a href="#" class="icon brands fa-stack-overflow"><span class="label">Stack Overflow</span></a></li>
-				<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Featured Post -->
-			<article class="post featured">
-				<header class="major">
-					<h2><a href="#">And this is a<br />
-							massive headline</a></h2>
-					<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-						facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-						amet nullam sed etiam veroeros.</p>
-				</header>
-				<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-				<ul class="actions special">
-					<li><a href="#" class="button large">View Code</a></li>
-				</ul>
-			</article>
-
-			<!-- Posts -->
-			<section class="posts">
-				<article>
-					<header>
-						<h2><a href="#">Student Planner<br />
-								Xamarin App</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="../2.0/bedir_vid/studentPlanner.gif" alt="" /></a>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">View on GitHub</a></li>
-						<li><a href="#" class="button">View Download Link</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#">A Bedir<br />
-								University</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="../2.0/bedir_vid/ABedirUniversity.gif" alt="" /></a>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">View Code</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#">Nour<br />
-							Limousine</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="../2.0/bedir_vid/nourLimousine.gif" alt="" /></a>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">View Code</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#">Custom<br />
-							Spreadsheet</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="../2.0/bedir_img/CustomSpreadScreenshot.PNG" alt="" /></a>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">View Code</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#">Imam<br />
-							Basheer</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="../2.0/bedir_img/ImamBasheer.PNG" alt="" /></a>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">View Code</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<h2><a href="#">Automation<br />
-							Scripts</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="../2.0/bedir_img/AutomationScreenshot.PNG" alt="" /></a>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">View Code</a></li>
-					</ul>
-				</article>
-			</section>
-
+        
+		<!-- Second Row-->
+		<div class="w3-row-padding">
+			<div class="w3-third w3-container w3-margin-bottom">
+				<a href="http://bedir.dev/projects/CustomSpreadsheet.php" target="_blank"><img src="bedir_img/CustomSpreadScreenshot.PNG" alt="Project Screenshot" style="width:100%" class="w3-hover-opacity"></a>
+				<div class="w3-container w3-white">
+					<p><b>Custom Spreadsheet</b></p>
+					<p>Custom spreadsheet software that reads and writes from a JSON file. This software was built to be lightweight and responsive.</p>
+				</div>
+			</div>
+			<div class="w3-third w3-container w3-margin-bottom">
+				<a href="https://www.imambasheer.com/" target="_blank"><img src="bedir_img/ImamBasheer.PNG" alt="Page Screenshot" style="width:100%" class="w3-hover-opacity"></a>
+				<div class="w3-container w3-white">
+					<p><b>Imam Basheer</b></p>
+					<p>Personal Page for Imam Basheer. Created using HTML, JavaScript, and CSS.</p>
+				</div>
+			</div>
+			<div class="w3-third w3-container" style="padding-bottom: 15px">
+			
+				<video style="width:100%" controls>
+				  <source src="bedir_vid/MathNinjaVid.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
+				<div class="w3-container w3-white">
+					<p><b>Math Ninja</b></p>
+					<p>Educational math game designed to sharpen quick mental math skills. Created using Java based Processing Development Environment</p>
+					<a href="https://github.com/Bediruna/MathNinja" target="_blank"><p><b>View Github Repository</b></p></a>
+				</div>
+				
+			</div>
 		</div>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<section>
-				<form method="post" action="#">
-					<div class="fields">
-						<div class="field">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
-						</div>
-						<div class="field">
-							<label for="email">Email</label>
-							<input type="text" name="email" id="email" />
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="3"></textarea>
-						</div>
-					</div>
-					<ul class="actions">
-						<li><input type="submit" value="Send Message" /></li>
-					</ul>
-				</form>
-			</section>
-			<section class="split contact">
-				<section>
-					<h3>Email</h3>
-					<p><a href="#">info@untitled.tld</a></p>
-				</section>
-				<section>
-					<h3>Links</h3>
-					<ul class="icons alt">
-						<li><a href="#" class="icon brands alt fa-stack-overflow"><span class="label">Stack
-									Overflow</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					</ul>
-				</section>
-			</section>
-		</footer>
-
-		<!-- Copyright -->
-		<div id="copyright">
-			<ul>
-				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-
+		
+		<!-- Third Row-->
+		<div class="w3-row-padding">
+			<div class="w3-third w3-container w3-margin-bottom">
+				<a href="https://github.com/Bediruna/AutomationScripts" target="_blank"><img src="bedir_img/AutomationScreenshot.PNG" alt="Page Screenshot" style="width:100%" class="w3-hover-opacity"></a>
+				<div class="w3-container w3-white">
+					<p><b>Automation Scripts</b></p>
+					<p>Automation scripts written to automate repetive and error prone tasks. This saves hours of time and strain while also minimizing errors. Written in a visual basic like language in AutoIt.</p>
+				</div>
+			</div>
+			<div class="w3-third w3-container" style="padding-bottom: 15px">
+				<a href="https://github.com/Bediruna/CreateXLFromPDFs" target="_blank"><img src="bedir_img/ReadPDFScreenshot.PNG" alt="Project Screenshot" style="width:100%" class="w3-hover-opacity"></a>
+				<div class="w3-container w3-white">
+					<p><b>Read PDF & Create Spreadsheet</b></p>
+					<p>This application reads multiple PDF files and searches for spefic values. The software then enters those values into an excel spreadsheet for reporting. In this example multiple invoices with the same format are searched for the customer name and total income. This software was written with C#.</p>
+				</div>
+			</div>
+			<div class="w3-third w3-container w3-margin-bottom">
+				<a href="https://bediruna.github.io/AdamsItalianIce/" target="_blank"><img src="bedir_img/AdamsScreenshot.PNG" alt="Project Screenshot" style="width:100%" class="w3-hover-opacity"></a>
+				<div class="w3-container w3-white">
+					<p><b>Adam's Italian Ice</b></p>
+					<p>Website created for a local italian ice business. Created using CSS, HTML, and JavaScript</p>
+				</div>
+			</div>
+		</div>		
 	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
+	
+   
+    <footer>
+        <p>
+            <a href="index.html" style="text-decoration: none">Bedir Aygun</a>
+            <a href="https://stackoverflow.com/users/10740446/bedir" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+            <a href="https://github.com/bediruna" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bedir-aygun" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
+        
+        
+    </footer>
+    
+    
+    <script>
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
 </body>
-
 </html>

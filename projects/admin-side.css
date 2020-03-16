@@ -1,0 +1,357 @@
+﻿html, body  {
+	background-color: #ffffff; width: 100%; height: 100%;
+}
+
+.masterheader {
+	width: 100%; height: 48px;
+	position: fixed; top: 0px;
+	margin: 0px auto; padding: 4px; display: block;
+}
+
+.admin_headboard_menu {
+	height: 42px; width: 100%;
+	float: left; display: block;
+}
+
+.admin_headboard_menu img {
+	height: 36px; margin-left: 2px; float: left;
+}
+
+.admin_header_name {
+	font-size: 20px; margin: 6px 4px 0px 4px; display: block; float: left;
+	font-family: 'Russo One', sans-serif; font-weight: bold;
+}
+
+.username_division {
+	width: auto; height: 100%; float: right; display: block;
+	height: 38px; font-size: small; text-align: right; margin-right: 8px;
+}
+
+.username_image {
+	width: 36px; height: 36px; margin-right: 12px; padding-top: 1px; display: block; float: left;
+}
+
+.username_text {
+	width: auto; height: 36px; margin-top: 8px;height: auto; font-size: small; float: left;
+}
+
+/* Loadboard */
+
+.loadbaord_cell_large {
+	width: 400px; height: 28px;
+	padding: 2px; display: inline-block;
+	background-color: #eee; border: 1px white solid; color: #333333;
+	font-size: small;
+}
+
+.loadbaord_cell_medium {
+	width: 250px; height: 28px;
+	padding: 2px; display: inline-block;
+	background-color: #eee; border: 1px white solid; color: #333333;
+	font-size: small;
+}
+
+.loadbaord_cell_small_m {
+	width: 125px; height: 28px;
+	padding: 2px; display: inline-block;
+	background-color: #eee; border: 1px white solid; color: #333333;
+	font-size: small;
+}
+
+.loadbaord_cell_small {
+	width: 100px; height: 28px;
+	padding: 2px; display: inline-block;
+	background-color: #eee; border: 1px white solid; color: #333333;
+	font-size: small;
+}
+
+.loadbaord_cell_xsmall {
+	width: 40px; height: 28px;
+	padding: 2px; display: inline-block;
+	background-color: #eee; border: 1px white solid; color: #333333;
+	font-size: small;
+}
+
+.Delivery {
+	background-color: #0066FF;
+	color: white;
+	font-weight: bold;
+
+}
+
+.Dispatched { background-color: #FFFF00; color: black; font-weight: normal; }
+.Reserved { background-color: #669900; color: black; font-weight: normal; }
+.Ready			{ background-color: #009900; color: white; font-weight: normal; }
+/*.Ready_Hot   { background-color: #990000; color: white; font-weight: bold; } */
+.Enroute		{ background-color: #0066FF; color: white; font-weight: normal; }
+.Rest { background-color: #a864a8; color: white; font-weight: normal; }
+.Vacation { background-color: #a864a8; color: white; font-weight: normal; }
+.Home { background-color: #C14E00; color: white; font-weight: normal; }
+.Shop { background-color: #a36209; color: white; font-weight: normal; }
+
+
+
+.Ready_Hot{
+	background: #990000; color: white; font-weight: normal;
+	
+	animation-name: flash;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	//Firefox 1+
+	-webkit-animation-name: flash;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	//Safari 3-4
+	-moz-animation-name: flash;
+	-moz-animation-duration: 1s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+//Firefox 1+
+@-webkit-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+//Safari 3-4
+@-moz-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+
+
+#searchForm {
+	margin-left: 4px;
+}
+
+#searchForm input {
+	margin: 0px -2px 0px -4px; display: inline-block;
+	background-color: white; color: black; border: 1px grey solid;
+	
+}
+
+.status_style {
+	width: 40px; background-color: black;
+}
+
+
+/* Side Menu */
+.leftSide {
+	min-width: 14%; height: 100%; margin-top: 8px; padding-top: 48px;
+	background-color: #293541; color: white; display: block; float: left;
+}
+
+.leftSide2 {
+	min-width: 3%; height: 100%; margin-top: 8px; padding-top: 48px;
+	background-color: #293541; color: white; display: block; float: left;
+}
+
+.menu_item {
+	width: 100%; height: 36px;
+	padding: 8px; display: block;
+	color: white; font-size: small;
+}
+
+.menu_icon {
+	padding-right: 8px; margin-top: -4px;
+	height: 24px;
+}
+
+.main {
+	width: 100%; height: 100%; overflow: hidden;
+}
+
+
+/* Main Window */
+.rightSide {
+	width: 86%; height: 100%; padding-top: 48px; 
+	background-color: #efefef; color: white; display: block; float: left;
+}
+
+.rightSide2 {
+	width: 100%; height: 100%; padding-top: 48px; 
+	background-color: #efefef; color: white; display: inline-block; float: left;
+}
+
+.windowpane_section {
+	width: 100%; height: 56px; padding-top: 8px; padding-left: 12px;
+	font-size: x-large; color: #333333; display: block; background-color: #fff;
+	font-weight: bold; border-bottom: 1px #ddd solid;
+}
+
+.content-wrapper {
+	width: 100%; height: auto;
+	padding: 12px;
+}
+
+
+
+
+/* Prequaification List */
+.status-division {
+	width: 100%; height: 64px;
+	background-color: white;
+	padding: 8px; border-bottom: 1px #ddd solid; 
+}
+
+.status-division2 {
+	width: 50%; height: 64px;
+	background-color: white;
+	padding: 8px; border-bottom: 1px #ddd solid; 
+}
+
+.status-box {
+	width: 55%; height: 100%; float: left;
+}
+
+.status-box2 {
+	width: 35%; height: 100%; float: right; font-size: small; color: #333333; text-align: right; font-weight: normal; margin-top: 8px; padding-right: 12px;
+}
+
+
+.status-sort-box {
+	width: 40%; height: 100%; float: right; text-align: right; margin: 4px 4px 0px 0px;
+}
+
+
+.status-info-main {
+	color: #0099FF;
+	font-size: medium; font-weight: bold;
+	display: block;
+}
+
+.status-info-sub {
+	color: #666666;
+	font-size: small;
+}
+
+.list-division {
+	width: 100%; height: 80%; display: block; float: left;
+	background-color: white; color: #ddd;
+	padding: 8px 0px 0px 0px; overflow-x: auto;
+}
+
+.select { color: #333; display: block }
+.select:hover { color: #333; background-color: #ddd; }
+
+
+.entry {
+	width: 100%; height: 32px; border-bottom: 1px #ddd solid; padding-left: 8px;
+	display: block; color: #333 !important; padding-top: 5px; font-size: small;
+}
+
+.entry-sm { width: 100px !important; display: block; float: left }
+.entry-md { width: 200px !important; display: block; float: left }
+.entry-lg { width: 300px !important; display: block; float: left }
+.entry-xl { width: 400px !important; display: block; float: left }
+
+
+.a_badge-complete {
+	width: 80px; height: 20px; display: block; padding-top: 2px;
+	border-radius: 4px; background-color: #0066FF; color: white;
+	font-size: x-small; font-weight: bold; text-align: center;
+	margin: 0px auto 0px auto;
+}
+
+.a_badge-incomplete {
+	width: 80px; height: 20px; display: block; padding-top: 2px;
+	border-radius: 4px; background-color: #FF6600; color: white;
+	font-size: x-small; font-weight: bold; text-align: center;
+	margin: 0px auto 0px auto;
+}
+
+.a_badge-expired {
+	width: 80px; height: 20px; display: block; padding-top: 2px;
+	border-radius: 4px; background-color: red; color: white;
+	font-size: x-small; font-weight: bold; text-align: center;
+	margin: 0px auto 0px auto;
+}
+
+#a_count {
+	
+}
+
+#rotating-item-wrapper {
+    position: relative;
+}
+
+.rotating-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.center {
+	text-align: center;
+}
+
+/* Form Display */
+.id_picture {
+	width: 264px; height: 164px; float: left;
+	display: block;
+	margin-left: 8px;
+}
+
+.id_picture img {
+	width: 100%; height: 100%;
+}
+
+.b_information {
+	width: 600px; height: auto; float: left;
+	display: block;
+	margin-left: 8px; color: #333333; margin-top: -6px;
+}
+
+.b_information2 {
+	width: 100%; height: auto; float: left;
+	display: block;
+	margin-left: 8px; color: #333333; margin-top: 2px; padding-top: 8px; margin-right: 8px;
+	border-top: 1px #ddd solid;
+}
+
+.left {
+	width: 100%;
+	float: left;
+	margin-left: 8px;
+	padding-top: 8px;
+	color: gray;
+}
+
+.button-left {
+	margin-right: 8px;
+}
+
+.b_red { background-color: #aa0000; border-color: #FF5050; }
+.b_blue { background-color: #3399FF; border-color: #0099FF; }
+.b_amber { background-color: #FF6600; border-color: #FF9933; }
+.b_violet { background-color: #990099; border-color: #FF3399; }
+.b_green { background-color: green; border-color: #009933; }
+
+
+
+
+
+
+
+
+
+/* Styling */
+.header_style_1 { background-color: #ffffff; z-index: 99; border-bottom: 1px #eeeeee solid; color: #333333; }
+.header_style_2 { background-color: #111111; z-index: 99; border-bottom: 1px silver solid; color: #ffffff; }
