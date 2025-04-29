@@ -1,24 +1,30 @@
-/* Define default (light) theme variables */
 :root {
     --background-color: white;
     --text-color: black;
     --navbar-bg-color: rgba(255, 255, 255, 0.7);
 }
 
-/* Define dark theme variables */
 [data-bs-theme="dark"] {
     --background-color: black;
     --text-color: white;
     --navbar-bg-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Apply the variables */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
 .justify-space {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    color: var(--text-color) !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
