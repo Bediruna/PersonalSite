@@ -2,7 +2,7 @@
     import {  skills, jobs, education, certifications } from '$lib/ResumeData.js';
 </script>
 
-<div class="container my-5">
+<div class="container">
     <a
         style="float: right;"
         href="/Bedir Aygun Resume.pdf"

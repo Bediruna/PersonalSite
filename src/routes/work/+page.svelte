@@ -3,7 +3,7 @@
 	const { projects } = data;
 </script>
 
-<div class="container my-5">
+<div class="container">
 	<h2 class="text-center mb-4">RECENT WORK</h2>
 	<div class="grid gap-4 md:grid-cols-2">
 		{#each projects as project}

@@ -20,6 +20,7 @@
             top: 0;
             z-index: 10;
             background-color: var(--navbar-bg-color);
+            margin-bottom: 1em;
         }
     }
 </style>
