@@ -77,6 +77,14 @@
 </nav>
 
 <style>
+    .nav-link {
+        font-size: 1.3rem;
+        color: var(--text-color) !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     #theme-toggle-btn {
         background: none;
         border: none;

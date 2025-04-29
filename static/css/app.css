@@ -20,11 +20,3 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-.nav-link {
-    font-size: 1.3rem;
-    color: var(--text-color) !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}

@@ -1,5 +1,5 @@
 <script>
-    import {  skills, jobs, education, certifications } from '$lib/ResumeData.js';
+    import {  summary, skills, jobs, education, certifications } from '$lib/ResumeData.js';
 </script>
 
 <div class="container">
@@ -13,12 +13,7 @@
 
     <div>
         <p>
-            I am a Software Engineer with more than 8 years of experience.
-            Skilled in developing technical solutions and automations to real
-            world business problems. Expertise spans front-end web development,
-            back-end software engineering, and mobile development. Consistently
-            focused on optimizing performance, ensuring code quality, and
-            building intuitive user interfaces.
+            {summary}
         </p>
     </div>
 
