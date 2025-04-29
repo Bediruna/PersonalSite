@@ -1,0 +1,24 @@
+/* Define default (light) theme variables */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --navbar-bg-color: white;
+}
+
+/* Define dark theme variables */
+[data-bs-theme="dark"] {
+    --background-color: black;
+    --text-color: white;
+    --navbar-bg-color: black;
+}
+
+/* Apply the variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.justify-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
