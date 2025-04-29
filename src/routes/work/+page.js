@@ -3,12 +3,14 @@ export async function load() {
 	const data = await res.json();
 
 	const projects = data
-		.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+		// .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+		.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
 		.slice(0, 5)
 		.map(repo => ({
 			title: repo.name,
 			description: repo.description || 'No description provided.',
-			link: repo.html_url
+			link: repo.html_url,
+			homepage: repo.homepage || null,
 		}));
 
 	return { projects };
