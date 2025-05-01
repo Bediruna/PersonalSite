@@ -8,7 +8,8 @@ export const localProjects = [
         "updated_at": "2025-05-01T13:26:11Z",
         "pushed_at": "2025-05-01T13:27:36Z",
         "homepage": "https://www.bedir.dev/",
-        "size": 1184
+        "size": 1184,
+        "blog_slug": "building-my-personal-website"
     },
     {
         "id": 745810350,
@@ -19,7 +20,8 @@ export const localProjects = [
         "updated_at": "2025-04-17T17:08:57Z",
         "pushed_at": "2025-04-17T17:08:53Z",
         "homepage": "",
-        "size": 582
+        "size": 582,
+        "blog_slug": "creating-a-fitness-app"
     },
     {
         "id": 856561265,
@@ -30,7 +32,8 @@ export const localProjects = [
         "updated_at": "2025-04-29T20:41:40Z",
         "pushed_at": "2025-03-11T11:40:43Z",
         "homepage": "https://www.betterlovelanguage.com/",
-        "size": 37
+        "size": 37,
+        "blog_slug": "love-language-quiz"
     },
     {
         "id": 962035233,
@@ -41,7 +44,8 @@ export const localProjects = [
         "updated_at": "2025-04-24T01:08:53Z",
         "pushed_at": "2025-04-19T20:01:25Z",
         "homepage": "",
-        "size": 254
+        "size": 254,
+        "blog_slug": "minimal-meal-tracker"
     },
     {
         "id": 242823280,
@@ -52,7 +56,8 @@ export const localProjects = [
         "updated_at": "2025-04-29T20:41:13Z",
         "pushed_at": "2025-04-29T21:00:37Z",
         "homepage": "",
-        "size": 11
+        "size": 11,
+        "blog_slug": "daliciadam-game"
     },
     {
         "id": 951326601,
@@ -63,6 +68,7 @@ export const localProjects = [
         "updated_at": "2025-04-06T03:37:52Z",
         "pushed_at": "2025-03-25T04:47:06Z",
         "homepage": "",
-        "size": 25024
+        "size": 25024,
+        "blog_slug": "math-ninja-game"
     }
 ];

@@ -1,6 +1,7 @@
 <script>
     import GitHubIcon from "../../components/icons/GitHubIcon.svelte";
     import LinkIcon from "../../components/icons/LinkIcon.svelte";
+    import BlogIcon from "../../components/icons/BlogIcon.svelte";
     export let data;
     const { projects } = data;
 </script>
@@ -21,6 +22,14 @@
                         >
                             <GitHubIcon size={24} />
                         </a>
+
+                        <a
+                            href={`/blog/${project.blog_slug}`}
+                            class="text-primary text-decoration-none"
+                        >
+                            <BlogIcon size={24} />
+                        </a>
+
                         {#if project.homepage}
                             <a
                                 href={project.homepage}
