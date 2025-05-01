@@ -33,6 +33,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/work">WORK</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog">BLOG</a>
+            </li>
         </ul>
 
         <!-- Right nav items -->
