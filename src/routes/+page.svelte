@@ -1,12 +1,20 @@
 <script>
-    import {  summary, skills, jobs, education, certifications } from '$lib/ResumeData.js';
+    import DownloadIcon from "../components/icons/DownloadIcon.svelte";
+    import {
+        summary,
+        skills,
+        jobs,
+        education,
+        certifications,
+    } from "$lib/ResumeData.js";
 </script>
 
 <div class="container">
     <a
-        style="float: right;"
+        class="text-decoration-none float-end"
         href="/Bedir Aygun Resume.pdf"
-        download="Bedir Aygun Resume.pdf">Download PDF</a
+        title="Download Resume PDF"
+        download="Bedir Aygun Resume.pdf"><DownloadIcon height="1" /></a
     >
     <h1>BEDIR AYGUN</h1>
     <h2>SOFTWARE ENGINEER</h2>
@@ -21,7 +29,7 @@
         <h2>TECHNICAL PROFICIENCIES</h2>
         {#each skills as skill}
             <div>
-                <h5 style="display: inline;">{skill.category}: </h5>
+                <h5 style="display: inline;">{skill.category}:</h5>
                 <span>{skill.items.join(", ")}</span>
             </div>
         {/each}
