@@ -1,17 +1,31 @@
+import { localProjects } from '$lib/WorkData.js';
+
 export async function load() {
-	const res = await fetch('https://api.github.com/users/bediruna/repos');
-	const data = await res.json();
+    let getProjectsLocally = true;
 
-	const projects = data
-		// .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
-		.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
-		.slice(0, 5)
-		.map(repo => ({
-			title: repo.name,
-			description: repo.description || 'No description provided.',
-			link: repo.html_url,
-			homepage: repo.homepage || null,
-		}));
+    // WIP: hit rate limit for github api, so will use local data until I implement a better solution
+    if(getProjectsLocally){
+        return { projects: localProjects };
+    }
 
-	return { projects };
+    try {
+        const res = await fetch('https://api.github.com/users/bediruna/repos');
+
+        if (!res.ok) {
+            throw new Error(`GitHub API error: ${res.status} ${res.statusText}`);
+        }
+
+        const data = await res.json();
+
+        const projects = data
+            .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+            .slice(0, 5);
+
+        return { projects };
+    } catch (error) {
+        console.error('Error loading projects from GitHub API:', error);
+
+        // Fallback to local data
+        return { projects: localProjects };
+    }
 }
