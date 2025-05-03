@@ -62,7 +62,7 @@
                     <GitHubIcon />
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-flex">
                 <button
                     id="theme-toggle-btn"
                     on:click={toggleTheme}
