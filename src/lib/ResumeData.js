@@ -95,7 +95,7 @@ export const jobs = [
 export const education = [
     {
         institution: "Western Governors University - Salt Lake City, UT",
-        period: "Dec 2017 - Sep 2018",
+        period: "Dec 2017 - Sep 2020",
         degree: "Bachelor of Science in Software Development",
     },
     {
