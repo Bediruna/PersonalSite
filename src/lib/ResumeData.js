@@ -107,6 +107,10 @@ export const education = [
 
 export const certifications = [
     {
+        name: "AWS Certified Developer",
+        date: "May 2025",
+    },
+    {
         name: "AWS Certified Cloud Practitioner",
         date: "Sep 2024",
     },
