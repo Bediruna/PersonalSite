@@ -29,7 +29,7 @@
                 href={project.homepage}
                 target="_blank"
                 class="text-decoration-none"
-                title="View website"
+                title={project.homepage === "https://www.bedir.dev" ? "View website (recursive)" : "View website"}
               >
                 <LinkIcon size={40} />
               </a>

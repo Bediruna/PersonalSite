@@ -1,13 +1,13 @@
 export const localProjects = [
     {
         "id": 812790752,
-        "name": "PersonalSite",
-        "html_url": "https://github.com/Bediruna/PersonalSite",
+        "name": "Bedir.dev",
+        "html_url": "https://github.com/Bediruna/Bedir.dev",
         "description": "SvelteKit based website for bedir.dev",
         "created_at": "2024-06-09T22:07:05Z",
         "updated_at": "2025-05-01T13:26:11Z",
         "pushed_at": "2025-05-01T13:27:36Z",
-        "homepage": "https://www.bedir.dev/",
+        "homepage": "https://www.bedir.dev",
         "size": 1184
     },
     {
@@ -23,13 +23,13 @@ export const localProjects = [
     },
     {
         "id": 856561265,
-        "name": "BetterLoveLanguage",
-        "html_url": "https://github.com/Bediruna/BetterLoveLanguage",
+        "name": "BetterLoveLanguage.com",
+        "html_url": "https://github.com/Bediruna/BetterLoveLanguage.com",
         "description": "SvelteKit based love language quiz.",
         "created_at": "2024-09-12T19:35:44Z",
         "updated_at": "2025-04-29T20:41:40Z",
         "pushed_at": "2025-03-11T11:40:43Z",
-        "homepage": "https://www.betterlovelanguage.com/",
+        "homepage": "https://www.betterlovelanguage.com",
         "size": 37
     },
     {
